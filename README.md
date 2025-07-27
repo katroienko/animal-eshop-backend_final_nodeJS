@@ -1,4 +1,5 @@
 # 🐾 Pet Shop – Backend API
+📖 [Прочитать на русском](./README.ru.md)  📖 [Auf Deutsch lesen](./README.de.md)
 
 A backend service for a pet shop built with **Node.js**, **Express**, and **MongoDB**. This API supports authentication with roles, product and order management, category image uploads, and real-time updates via WebSocket.
 
