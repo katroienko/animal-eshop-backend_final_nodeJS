@@ -86,7 +86,12 @@ A backend service for a pet shop built with **Node.js**, **Express**, and **Mong
 ## 📌 Environment Variables (example)
 
 ```
-PORT=3000
-MONGODB_URI=your-mongo-uri
-JWT_SECRET=your-secret-key
+PORT = 3000
+SOCKET_PORT=5000
+DATABASE_HOST=
+DATABASE_NAME=
+DATABASE_USER=
+DATABASE_PASSWORD=
+JWT_SECRET=s
+DATABASE_URI=
 ```
