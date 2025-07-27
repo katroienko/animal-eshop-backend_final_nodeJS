@@ -1,73 +1,92 @@
-# animal-eshop-backend_final_nodeJS
-🐾 Pet Shop – Backend API
-A backend service for a pet shop built with Node.js, Express, and MongoDB. This API supports authentication with roles, product and order management, category image uploads, and real-time updates via WebSocket.
+# 🐾 Pet Shop – Backend API
 
-🚀 Tech Stack
-Node.js + Express.js — RESTful API
+A backend service for a pet shop built with **Node.js**, **Express**, and **MongoDB**. This API supports authentication with roles, product and order management, category image uploads, and real-time updates via WebSocket.
 
-MongoDB + Mongoose — remote database
+---
 
-WebSocket — real-time communication
+## 🚀 Tech Stack
 
-jsonwebtoken (JWT) — token-based authentication
+- **Node.js** + **Express.js** — RESTful API
+- **MongoDB** + **Mongoose** — remote database
+- **WebSocket** — real-time communication
+- **jsonwebtoken (JWT)** — token-based authentication
+- **bcrypt** — secure password hashing
+- **multer** — file/image upload
+- **cors** — cross-origin requests
+- **dotenv** — environment variable management
 
-bcrypt — secure password hashing
+---
 
-multer — file/image upload
+## 🔐 Authentication & Roles
 
-cors — cross-origin requests
+- JWT-based login and registration
+- Role-based access control:
+  - `superadmin`
+  - `admin`
+  - `manager`
+  - `user`
+- Middlewares:
+  - `authenticate` — validates JWT
+  - `isSuperadmin` — restricts access to superadmins
 
-dotenv — environment variable management
+---
 
-🔐 Authentication & Roles
-JWT-based login and registration
+## 📁 API Endpoints
 
-Role-based access control:
+### `POST /api/auth`
+- User registration & login
+- Token generation
 
-superadmin
+### `GET /api/users`
+- Manage users (admin-only)
 
-admin
+### `GET /api/categories`
+- Create, update, delete categories
+- Upload image to `public/`
+- Uses `multer` for image upload
 
-manager
+### `GET /api/products`
+- Product CRUD operations
 
-user
+### `GET /api/orders`
+- Order processing
 
-Middlewares:
+---
 
-authenticate — validates JWT
+## 🛡 Error Handling
 
-isSuperadmin — restricts access to superadmins
+- `notFoundHandler` — for 404 (route not found)
+- `errorHandler` — for internal server errors
+- `HttpException` — custom utility for structured error responses
 
-📁 API Endpoints
-POST /api/auth
-User registration & login
+---
 
-Token generation
+## ✅ Validation
 
-GET /api/users
-Manage users (admin-only)
+- All incoming `request.body` data is validated using a `validateBody` middleware
+- Ensures strong API contract with the frontend
 
-GET /api/categories
-Create, update, delete categories
+---
 
-Upload image to public/
+## 🗂 Project Structure
 
-Uses multer for image upload
+```
+/controllers     # Business logic
+/middlewares     # Auth, validation, error handling
+/models          # Mongoose schemas
+/routes          # API routes
+/utils           # Custom exceptions, helpers
+/public          # Uploaded images (categories)
+/temp            # Temporary storage
+.env             # JWT_SECRET, DB URI, etc.
+```
 
-GET /api/products
-Product CRUD operations
+---
 
-GET /api/orders
-Order processing
+## 📌 Environment Variables (example)
 
-🛡 Error Handling
-notFoundHandler — for 404 (route not found)
-
-errorHandler — for internal server errors
-
-HttpException — custom utility for structured error responses
-
-✅ Validation
-All incoming request.body data is validated using a validateBody middleware
-
-Ensures strong API contract with the frontend
+```
+PORT=3000
+MONGODB_URI=your-mongo-uri
+JWT_SECRET=your-secret-key
+```
