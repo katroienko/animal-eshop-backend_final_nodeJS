@@ -7,66 +7,23 @@ A high‑performance **RESTful API** built with **Node.js + Express** for real e
 
 ---
 
-## 🧱 Selected Technologies & Why (benefit → problem solved)
+## 🧱 Selected Technologies & Why (Business Value → Problem Solved)
 
-- **Node.js** *(JavaScript runtime, non‑blocking I/O)*  
-  **Provides:** high concurrency with low latency.  
-  **Solves:** bottlenecks and delays under peak load.
-
-- **TypeScript** *(static typing, DTOs, typed models)*  
-  **Provides:** compile‑time safety, safer refactoring, typed DTOs and models, locked API/WS contracts.  
-  **Solves:** runtime bugs and frontend integration mismatches; eliminates silent catalog/order inconsistencies with typed Mongoose models.
-
-- **Express.js** *(HTTP framework, middleware & routing)*  
-  **Provides:** structured routes/middlewares, unified validation/logging/error handling.  
-  **Solves:** code sprawl and accelerates API delivery.
-
-- **MongoDB** *(NoSQL document DB)*  
-  **Provides:** flexible schema for catalogs/orders, fast indexed queries & pagination.  
-  **Solves:** frequent product model changes and scaling for traffic spikes.
-
-- **Mongoose** *(ODM, schemas & validation)*  
-  **Provides:** declarative schemas, hooks, model‑level validation.  
-  **Solves:** inconsistent data and silent DB errors.
-
-- **WebSocket** *(bi‑directional real‑time)*  
-  **Provides:** instant order status, manager alerts, live dashboards.  
-  **Solves:** expensive polling and laggy UX.
-
-- **JSON Web Token (JWT)** *(stateless auth)*  
-  **Provides:** session‑less tokens, horizontal scale readiness.  
-  **Solves:** session storage/replication and reduces server load.
-
-- **bcrypt** *(password hashing with salt)*  
-  **Provides:** secure password storage.  
-  **Solves:** account compromise risk in case of leaks.
-
-- **Multer** *(multipart/form‑data uploads)*  
-  **Provides:** reliable product image uploads (streaming, size limits, format filters).  
-  **Solves:** crashes due to large files and metadata issues.
-
-- **CORS** *(Cross‑Origin Resource Sharing)*  
-  **Provides:** safe access from a separate frontend domain/subdomain.  
-  **Solves:** browser blocking and SPA/SSR integration hurdles.
-
-- **dotenv** *(environment variable management)*  
-  **Provides:** clean dev/stage/prod configuration; secrets out of code.  
-  **Solves:** hard‑coded keys and deployment mistakes.
-
-- **RBAC** *(Role‑Based Access Control: `superadmin`, `admin`, `manager`, `user`)*  
-  **Provides:** clear boundaries via middleware (`authenticate`, `isSuperadmin`).  
-  **Solves:** unauthorized actions and operational risk.
-
+| Technology | Business Value | Problem Solved |
+|------------|----------------|----------------|
+| **Node.js** (non-blocking I/O) | Handles **thousands of customers in parallel** without slowing down checkout | Bottlenecks & delays during peak sales (e.g., Black Friday) |
+| **TypeScript** (typed DTOs & models) | Prevents costly bugs and ensures **stable features for end-users** | Frontend-backend mismatches causing broken orders/catalog data |
+| **Express.js** (routes & middleware) | Speeds up **time-to-market** with structured, reusable routes | Messy codebases that slow feature delivery & raise dev costs |
+| **MongoDB** (NoSQL) | Adapts quickly to **fast-changing product catalogs** | Rigid SQL schemas make adding attributes expensive |
+| **Mongoose** (ODM) | Keeps data **clean & consistent**, avoiding order errors | Silent DB corruption → wrong inventory or orders |
+| **WebSocket** (real-time) | Creates **premium UX** with instant order status & alerts | Customer frustration from delayed notifications / polling |
+| **JWT** (stateless auth) | Enables **secure & scalable login** across servers | High infra costs from session storage/replication |
+| **bcrypt** (password hashing) | Protects users & brand reputation by making leaks **harmless** | Financial loss & trust damage from account hacks |
+| **Multer** (uploads) | Supports **rich visuals** that boost conversions | Crashes & downtime from large/bad media files |
+| **CORS** (cross-origin) | Ensures smooth **SPA/SSR/mobile app integration** | Browser blocking requests from separate domains |
+| **dotenv** (env management) | Reduces **deployment risks** & simplifies scaling | Leaked/hard-coded secrets, costly human mistakes |
+| **RBAC** (role-based access) | Prevents **financial & operational risks** | Unauthorized actions: discounts, data leaks, costly errors |
 ---
-
-## 💼 Business Value
-
-- **Faster path to purchase:** robust REST endpoints + instant status updates reduce friction.  
-- **Secure by default:** JWT + bcrypt + RBAC → fewer incidents and manual errors.  
-- **Scale‑ready:** modular architecture, horizontal scaling, flexible data model.
-
----
-
 ## 🚀 Tech Stack
 
 - **Node.js** + **Express.js** + **TypeScript**— RESTful API
