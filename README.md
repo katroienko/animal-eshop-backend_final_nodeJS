@@ -67,12 +67,6 @@ A high‑performance **RESTful API** built with **Node.js + Express** for real e
 
 ---
 
-## 📦 Tech Stack (at a glance)
-
-**Node.js, TypeScript, Express.js, MongoDB, Mongoose, WebSocket, JSON Web Token (JWT), bcrypt, Multer, CORS, dotenv, RBAC**
-
----
-
 ## 🚀 Tech Stack
 
 - **Node.js** + **Express.js** + **TypeScript**— RESTful API
