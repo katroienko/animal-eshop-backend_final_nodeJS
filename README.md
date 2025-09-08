@@ -4,8 +4,7 @@
 --
 A high-performance **RESTful API** built with **Node.js + Express** for real e-commerce scenarios:  
 secure **JWT** authentication, role-based access (**RBAC**), product/order management,  
-image uploads (**Multer**), and **real-time** events via **WebSocket** (order statuses, admin notifications).  
-Data is stored in **MongoDB** with models defined via **Mongoose**.
+image uploads (**Multer**), and **real-time** events via **WebSocket** (order statuses, admin notifications). Data is stored in **MongoDB** with models defined via **Mongoose**.
 ---
 
 ## 🧱 Selected Technologies & Why (Business Value → Problem Solved)
