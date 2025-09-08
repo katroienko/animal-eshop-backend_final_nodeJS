@@ -6,11 +6,6 @@ A high-performance **RESTful API** built with **Node.js + Express** for real e-c
 secure **JWT** authentication, role-based access (**RBAC**), product/order management,  
 image uploads (**Multer**), and **real-time** events via **WebSocket** (order statuses, admin notifications).  
 Data is stored in **MongoDB** with models defined via **Mongoose**.
-
-**Impact:** Reduced order processing time and improved checkout reliability  
-through REST architecture, RBAC, WebSocket status updates, secure JWT authentication,  
-and MongoDB/Mongoose.
-
 ---
 
 ## 🧱 Selected Technologies & Why (Business Value → Problem Solved)
@@ -30,7 +25,7 @@ and MongoDB/Mongoose.
 | **dotenv** (env management) | Reduces **deployment risks** & simplifies scaling | Leaked/hard-coded secrets, costly human mistakes |
 | **RBAC** (role-based access) | Prevents **financial & operational risks** | Unauthorized actions: discounts, data leaks, costly errors |
 ---
-## 🚀 Tech Stack
+##  Tech Stack
 
 - **Node.js** + **Express.js** + **TypeScript**— RESTful API
 - **MongoDB** + **Mongoose** — remote database
@@ -109,7 +104,7 @@ and MongoDB/Mongoose.
 
 ---
 
-## 📌 Environment Variables (example)
+## Environment Variables (example)
 
 ```
 PORT = 3000
